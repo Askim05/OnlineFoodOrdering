@@ -1,15 +1,17 @@
 package model;
 
+import java.time.LocalTime;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class FastFoodRestaurant extends ConcreteRestaurant {
     private Map<String, Double> menu;
 
-    public FastFoodRestaurant(String name,String cname, String location) {
-        super(name,cname, location);
-        this.menu = new HashMap<>();
+    public FastFoodRestaurant(int restaurantId, String name, String cuisineType, String location, LocalTime openingTime, LocalTime closingTime, List<MenuItem> menuItems, boolean isActive) {
+        super(restaurantId, name, cuisineType, location, openingTime, closingTime, menuItems, isActive);
     }
+
 
     public Map<String, Double> getMenu() {
         return menu;
